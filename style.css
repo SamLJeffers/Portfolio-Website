@@ -57,7 +57,7 @@ a {
 /*BODY*/
 h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
 }
 .about {text-align: center;
     color: #F7F7F7;
@@ -70,11 +70,12 @@ h2 {
     background-color: #D0E156;
     color: black;
     font-size: 25px;
-    margin: 150px auto;
-    padding: 50px;
+    margin: auto;
+    padding: 10px;
     grid-area: projects;
 }
 h4 {
+    font-size: 30px;
     text-align: center;
 }
 #img1 {
@@ -88,6 +89,7 @@ h4 {
     float: right;
     height: 300px;
     width: 300px;
+    padding-left: 10px;
     text-align: justify;
     border-radius: 50%;
 }
@@ -101,9 +103,22 @@ span {
 
 .skills {
     background-color: #121B31;
+    color: #F7F7F7;
+    padding: 10px;
     grid-area: skills;
 }
+.card {
+    display: flex;
+    justify-content: space-evenly;
+}
+#skill-logo {
+    border-radius: 50%;
+    height: 100px;
+    width:100px;
+}
+
 .contact {
     background-color: #D0E156;
+    padding: 10px;
     grid-area: contact;
 }
