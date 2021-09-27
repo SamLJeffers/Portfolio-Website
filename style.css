@@ -1,11 +1,15 @@
+* {
+    font-family: 'Playfair display';
+}
 body {
+    background-color: #121B31;
     padding: 0px;
 }
 .container {
     display: grid;
     height: 100%vh;
-    grid-template-columns: 0.6fr repeat(3, 1fr);
-    grid-template-rows: 7fr 20fr 4fr 5fr 3fr 2fr;
+    grid-template-columns: 0.35fr repeat(3, 1fr);
+    grid-template-rows: 0.05fr 0.1fr 0.5fr 1fr repeat(2, 0.05fr);
     grid-template-areas:
         "nav nav nav nav"
         "logo heading heading heading"
@@ -14,40 +18,92 @@ body {
         "skills skills skills skills"
         "contact contact contact contact";
     gap: 0.2rem;
-    text-align: center;
+    text-align: cent;
+
+    /*NAV*/
 }
 nav {
+    text-align: end;
     font-size: 30px;
     padding: 20px;
-
     grid-area: nav;
 }
+nav :hover {
+    color: #D0E156;
+}
 a {
+    color: #F7F7F7;
     text-decoration: none;
-    margin-right: 40px;
+    margin-right: 80px;
 }
 .logo {
-
-
+    background-image: url(./images/myLogo2.jpg);
+    background-repeat: no-repeat;
+    background-color: #121B31;
     grid-area: logo;
 }
-.heading {
 
+/*HEADING*/
+
+.heading {
+    text-align: center;
+    color: black;
+    font-size: 35px;
+    padding-right: 250px;
+    background-color: #D0E156;
     grid-area: heading;
 }
-.about {
 
+/*BODY*/
+h2 {
+    text-align: center;
+    font-size: 35px;
+}
+.about {text-align: center;
+    color: #F7F7F7;
+    background-color: #121B31;
+    font-size: 25px;
+    padding-bottom: 20px;
     grid-area: about;
 }
-.projects {
- 
+#projects {
+    background-color: #D0E156;
+    color: black;
+    font-size: 25px;
+    margin: 150px auto;
+    padding: 50px;
     grid-area: projects;
 }
-.skills {
+h4 {
+    text-align: center;
+}
+#img1 {
+    float: left;
+    height: 300px;
+    width: 300px;
+    padding-right: 10px;
+    border-radius: 50%;
+}
+#img2 {
+    float: right;
+    height: 300px;
+    width: 300px;
+    text-align: justify;
+    border-radius: 50%;
+}
+.text {
+    padding: 0px;
+    text-align: justify;
+}
+span {
+    font-weight: bold;
+}
 
+.skills {
+    background-color: #121B31;
     grid-area: skills;
 }
 .contact {
-
+    background-color: #D0E156;
     grid-area: contact;
 }
