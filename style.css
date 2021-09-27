@@ -18,10 +18,11 @@ body {
         "skills skills skills skills"
         "contact contact contact contact";
     gap: 0.2rem;
-    text-align: cent;
+    
+}
 
     /*NAV*/
-}
+
 nav {
     text-align: end;
     font-size: 30px;
@@ -32,12 +33,16 @@ nav :hover {
     color: #D0E156;
 }
 a {
+    font-size: 20px;
     color: #F7F7F7;
     text-decoration: none;
-    margin-right: 80px;
+    margin-right: 20px;
 }
+
 .logo {
     background-image: url(./images/myLogo2.jpg);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-color: #121B31;
     grid-area: logo;
@@ -48,24 +53,28 @@ a {
 .heading {
     text-align: center;
     color: black;
-    font-size: 35px;
-    padding-right: 250px;
+    font-size: 15px;
     background-color: #D0E156;
     grid-area: heading;
 }
+
 
 /*BODY*/
 h2 {
     text-align: center;
     font-size: 40px;
 }
-.about {text-align: center;
+.about {
+    text-align: center;
     color: #F7F7F7;
     background-color: #121B31;
     font-size: 25px;
     padding-bottom: 20px;
     grid-area: about;
 }
+
+/*PROJECTS*/
+
 #projects {
     background-color: #D0E156;
     color: black;
@@ -101,7 +110,9 @@ span {
     font-weight: bold;
 }
 
-.skills {
+/*SKILLS*/
+
+#skills {
     background-color: #121B31;
     color: #F7F7F7;
     padding: 10px;
@@ -109,6 +120,7 @@ span {
 }
 .card {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 #skill-logo {
@@ -117,8 +129,39 @@ span {
     width:100px;
 }
 
-.contact {
+#contact {
     background-color: #D0E156;
     padding: 10px;
     grid-area: contact;
+}
+@media screen and (max-width: 550px){
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 0.05fr);
+        grid-template-areas:
+            "heading"
+            "about"
+            "projects"
+            "skills"
+            "conact";
+    }
+    .logo, nav {
+        display: none;
+    }
+    #skill-logo{
+        height: 50px;
+        width:50px;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    .about {
+        font-size: 20px;
+    }
+    .text {
+        font-size: 17px;
+    }
 }
